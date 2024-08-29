@@ -10,10 +10,10 @@ app.use(express.static('public')); // Serve static files (HTML, CSS, JS)
 
 // MySQL connection
 const connection = mysql.createConnection({
-  host: 'dbuser.c3uqcg6mm1by.us-east-1.rds.amazonaws.com',
-  user: 'admin',
-  password: '9611537673',
-  database: 'message'
+  host: 'end point  .',
+  user: 'username',
+  password: 'password',
+  database: 'databasename'
 });
 
 connection.connect((err) => {
