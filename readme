@@ -1,0 +1,31 @@
+#this is Project help us to understand hoe to connect AWS RDS to Local machine and also to AWS EC2 instance
+
+Steps to be followed
+
+step1 : creat a new AWS instance
+step2 : create a RDS instance
+
+    a. Choose the database engine: MySQL, PostgreSQL, Oracle, SQL Server, or MariaDB
+    b. Choose the instance type: db.t2.micro (free tier), db.m
+    c. Choose the database instance class: db.t2.micro (free tier), db.
+    d. Configure the instance details: db name, master username, master password, and DB instance identifier
+    e. Configure the advanced settings: VPC security groups, edit the Inbound security group and all port no 3306 for mysql communication
+    f. Review and launch the DB instance
+    g. Once the DB instance is created, it will be in 'available' state
+    h. Once the DB instance is available, go to 'Connectivity & Security' tab and copy the
+    'Endpoint' and 'Master username' and 'Master user password'
+
+
+step3 : install mysql connector in local machine
+NodeJs > Backend
+HTML , CSS Javascript > Frontend
+
+step4 : add the following to your server.js file
+
+// MySQL connection
+const connection = mysql.createConnection({
+host: 'AWS RDS Endpoint',
+user: 'username', // username like "admin"
+password: 'password', // password
+database: 'databasename' // database name
+});
